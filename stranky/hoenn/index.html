@@ -1,0 +1,1300 @@
+<!doctype html>
+<html lang="cs">
+
+<head>
+  <title>Pokédex | Hoenn</title>
+  <meta name="description" content="Seznam Pokémonů, měst, vesnic a gym leadrů z Generace 3 - Hoenn">
+  <link rel="shortcut icon" href="../../img/logo.png" type="image/x-icon">
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+  <nav class="nav">
+    <h2 class="logo"><a href="../../index.html"><img src="../../img/logo.png" alt="pokedex" height="55" width="55">
+        Pokédex</a></h2>
+    <input type="checkbox" id="chk">
+    <label for="chk" class="show-menu-btn">
+      <i class="fas fa-bars"></i>
+    </label>
+    <ul class="menu">
+      <li><a href="../kanto/index.html">Kanto</a></li>
+      <li><a href="../johto/index.html">Johto</a></li>
+      <li><a href="index.html">Hoenn</a></li>
+      <li><a href="../sinnoh/index.html">Sinnoh</a></li>
+      <li><a href="../unova/index.html">Unova</a></li>
+      <li><a href="../kalos/index.html">Kalos</a></li>
+      <li><a href="../alola/index.html">Alola</a></li>
+      <li>
+            <div class="box">
+                <input class="input_box" type="text" placeholder="Hledej">
+              <a class="btn" href="#tabulka">
+              <i class="fas fa-search"></i>
+            
+             </a>
+            </div></li>
+            <li><i class="fas fa-sign-in-alt" data-toggle="modal" data-target="#myModal"></i></li>
+      <li><label for="chk" class="hide-menu-btn">
+        <i class="fas fa-times"></i>
+      </label></li>
+    </ul>
+  </nav>
+
+<!-- Modal pro registraci/přihlášení -->
+<div class="modal fade" id="myModal">
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content">
+          
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <div><h4 class="modal-title reg">Registrace/Přihlášení</h4></div>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            
+            <!-- Modal body -->
+            
+            <div class="modal-body">
+                <div class="container">
+                    <input type="checkbox" id="chk2">
+                    <label for="chk2" style="float: right;" class="registrace-prihlaseni">Registrace <i class="fas fa-arrows-alt-h"></i> Přihlášení</label>
+                        
+                  <h4 class="reg mb-3">Registrace</h4>
+                  <h4 class="log mb-3">Přihlášení</h4>
+                  <form class="reg">
+                    <label for="uname"><b>Uživatelské jméno <i class="povinne">*</i> </b></label>
+                    <input type="text" placeholder="Uživatelské jméno" name="uname" id="uname" required>
+              
+                    <label for="psw1"><b>Heslo <i class="povinne">*</i> </b></label>
+                    <input type="password" placeholder="Heslo" name="psw1" id="psw1" required>
+                    
+                    <label for="psw2"><b>Heslo znovu <i class="povinne">*</i> </b></label>
+                    <input type="password" placeholder="Heslo znovu" name="psw2" id="psw2" required>
+      
+                    <label for="email"><b>E-mail <i class="povinne">*</i> </b></label>
+                    <input type="email" placeholder="E-mail" name="email" id="email" required>
+      
+                    <label for="narozeniny"><b>Datum narození</b></label>
+                    <input type="date" name="narozeniny" id="narozeniny">
+      
+                    <label for="starter"><b>Starter Pokémon <i class="povinne">*</i> </b></label>
+                    <select name="starter" id="starter" required>
+                      <option value="" class="nic" disabled selected>Vyber starter Pokémona</option>
+                      <option value="kanto" class="select-generace" disabled>kanto - generace I</option>
+                      <option value="bulbasaur">Bulbasaur</option>
+                      <option value="charmander">Charmander</option>
+                      <option value="squirtle">Squirtle</option>
+      
+                      <option value="johto" class="select-generace" disabled>johto - generace II</option>
+                      <option value="chikorita">Chikorita</option>
+                      <option value="cyndaquil">Cyndaquil</option>
+                      <option value="totodile">Totodile</option>
+      
+                      <option value="hoenn" class="select-generace" disabled>hoenn - generace III</option>
+                      <option value="treecko">Treecko</option>
+                      <option value="torchic">Torchic</option>
+                      <option value="mudkip">Mudkip</option>
+      
+                      <option value="sinnoh" class="select-generace" disabled>sinnoh - generace IV</option>
+                      <option value="turtwig">Turtwig</option>
+                      <option value="chimchar">Chimchar</option>
+                      <option value="piplup">Piplup</option>
+      
+                      <option value="unova" class="select-generace" disabled>unova - generace V</option>
+                      <option value="snivy">Snivy</option>
+                      <option value="tepig">Tepig</option>
+                      <option value="oshawott">Oshawott</option>
+      
+                      <option value="kalos" class="select-generace" disabled>kalos - generace VI</option>
+                      <option value="chespin">Chespin</option>
+                      <option value="fennekin">Fennekin</option>
+                      <option value="froakie">Froakie</option>
+      
+                      <option value="alola" class="select-generace" disabled>alola - generace VII</option>
+                      <option value="rowlet">Rowlet</option>
+                      <option value="litten">Litten</option>
+                      <option value="Popplio">Popplio</option>
+                    </select>
+                    <p class="povinne-udaje"><b><i class="povinne">*</i></b> - povinné údaje</p>
+                    <button type="submit">Registrovat</button>
+                    <br>
+                    <label>
+                      <input type="checkbox" checked="checked" name="remember"> Pamatovat si
+                    </label>
+                  </form>
+      
+                  <form class="log">
+                      <label for="uname-log"><b>Uživatelské jméno</b></label>
+                      <input type="text" placeholder="Uživatelské jméno" name="uname-log" id="uname-log" required>
+                
+                      <label for="psw1-log"><b>Heslo</b></label>
+                      <input type="password" placeholder="Heslo" name="psw1-log" id="psw1-log" required>
+                      <button type="submit">Přihlásit se</button>
+                      <br>
+                      <label>
+                        <input type="checkbox" checked="checked" name="remember"> Pamatovat si
+                      </label>
+                    </form>
+                  
+                </div>
+              </div>
+            
+            <!-- Modal footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Zavřít</button>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+  <div id="header-bg">
+    <div class="header-text">
+      <h1>Hoenn</h1>
+      <h2>Generace III</h2>
+    </div>
+  </div>
+
+  <main class="container">
+    <div class="row zarovnany-nadpis">
+      <div class="col-md-12 col-lg-5 col-xs-12">
+        <h3 class="mt-3">Mapa regionu Hoenn</h3>
+        <div><a href="../../img/hoenn-map.png" target="_blank" class="zoom"><img src="../../img/hoenn-map.png" alt="mapa hoennu" class="mapa"
+              height="277" width="400"></a></div>
+      </div>
+      <div class="col-md-12 col-lg-7 col-xs-12">
+        <h3 class="mt-3">Základní informace o regionu</h3>
+        <h4><b>Profesor:</b> Professor Birch</h4>
+        <h4><b>Starter pokémon:</b> Treecko, Torchic, Mudkip</h4>
+        <h4><b>Regionální padouchové:</b> Team Aqua, Team Magma</h4>
+      </div>
+    </div>
+
+    <div class="row">
+    <!-- Tabulka pokémonů #252 - #319 -->
+    <div class="col-md-12 col-lg-6 col-xs-12">
+        <h3 class="mt-5 text-center" id="tabulka">Tabulka pokémonů #252 - #319</h3>
+        <table class="table table-bordered text-center johto">
+            <thead>
+                <tr>
+                    <th>Pořadí</th>
+                    <th>Obrázek</th>
+                    <th>Pokémon</th>
+                    <th colspan="2">Typ</th>
+                </tr>
+            </thead>
+            <tbody class="pokemoni-tabulka">
+                <tr>
+                    <td>#252</td>
+                    <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/treecko.png" alt="Treecko"></td>
+                    <td>Treecko</td>
+                    <td colspan="2" class="grass">Grass</td>
+                </tr>
+                <tr>
+                    <td>#253</td>
+                    <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/grovyle.png" alt="Grovyle"></td>
+                    <td>Grovyle</td>
+                    <td colspan="2" class="grass">Grass</td>
+                </tr>
+                <tr>
+                    <td>#254</td>
+                    <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/sceptile.png" alt="Sceptile"></td>
+                    <td>Sceptile</td>
+                    <td colspan="2" class="grass">Grass</td>
+                </tr>
+                <tr>
+                    <td>#255</td>
+                    <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/torchic.png" alt="Torchic"></td>
+                    <td>Torchic</td>
+                    <td colspan="2" class="fire">Fire</td>
+                </tr>
+                <tr>
+                    <td>#256</td>
+                    <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/combusken.png" alt="Combusken"></td>
+                    <td>Combusken</td>
+                    <td colspan="2" class="fire">Fire</td>
+                </tr>
+                <tr>
+                    <td>#257</td>
+                    <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/blaziken.png" alt="Blaziken"></td>
+                    <td>Blaziken</td>
+                    <td colspan="2" class="fire">Fire</td>
+                </tr>
+                <tr>
+                    <td>#258</td>
+                    <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/mudkip.png" alt="Mudkip"></td>
+                    <td>Mudkip</td>
+                    <td colspan="2" class="water">Water</td>
+                </tr>
+                <tr>
+                    <td>#259</td>
+                    <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/marshtomp.png" alt="Marshtomp"></td>
+                    <td>Marshtomp</td>
+                    <td colspan="2" class="water">Water</td>
+                </tr>
+                <tr>
+                    <td>#260</td>
+                    <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/swampert.png" alt="Swampert"></td>
+                    <td>Swampert</td>
+                    <td colspan="2" class="water">Water</td>
+                </tr>
+                <tr>
+                    <td>#261</td>
+                    <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/poochyena.png" alt="Poochyena"></td>
+                    <td>Poochyena</td>
+                    <td colspan="2" class="dark">Dark</td>
+                </tr>
+                <tr>
+                    <td>#262</td>
+                    <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/mightyena.png" alt="Mightyena"></td>
+                    <td>Mightyena</td>
+                    <td colspan="2" class="dark">Dark</td>
+                </tr>
+                <tr>
+                    <td>#263</td>
+                    <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/zigzagoon.png" alt="Zigzagoon"></td>
+                    <td>Zigzagoon</td>
+                    <td colspan="2" class="normal">Normal</td>
+                </tr>
+                <tr>
+                    <td>#264</td>
+                    <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/linoone.png" alt="Linoone"></td>
+                    <td>Linoone</td>
+                    <td colspan="2" class="normal">Normal</td>
+                </tr>
+                <tr>
+                    <td>#265</td>
+                    <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/wurmple.png" alt="Wurmple"></td>
+                    <td>Wurmple</td>
+                    <td colspan="2" class="bug">Bug</td>
+                </tr>
+                <tr>
+                    <td>#266</td>
+                    <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/silcoon.png" alt="Silcoon"></td>
+                    <td>Silcoon</td>
+                    <td colspan="2" class="bug">Bug</td>
+                </tr>
+                <tr>
+                    <td>#267</td>
+                    <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/beautifly.png" alt="Beautifly"></td>
+                    <td>Beautifly</td>
+                    <td class="bug">Bug</td>
+                    <td class="flying">Flying</td>
+                </tr>
+                <tr>
+                    <td>#268</td>
+                    <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/cascoon.png" alt="Cascoon"></td>
+                    <td>Cascoon</td>
+                    <td colspan="2" class="bug">Bug</td>
+                </tr>
+                <tr>
+                    <td>#269</td>
+                    <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/dustox.png" alt="Dustox"></td>
+                    <td>Dustox</td>
+                    <td class="bug">Bug</td>
+                    <td class="poison">Poison</td>
+                </tr>
+                <tr>
+                    <td>#270</td>
+                    <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/lotad.png" alt="Lotad"></td>
+                    <td>Lotad</td>
+                    <td class="water">Water</td>
+                    <td class="grass">Grass</td>
+                </tr>
+                <tr>
+                    <td>#271</td>
+                    <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/lombre.png" alt="Lombre"></td>
+                    <td>Lombre</td>
+                    <td class="water">Water</td>
+                    <td class="grass">Grass</td>
+                </tr>
+                <tr>
+                    <td>#272</td>
+                    <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/ludicolo.png" alt="Ludicolo"></td>
+                    <td>Ludicolo</td>
+                    <td class="water">Water</td>
+                    <td class="grass">Grass</td>
+                </tr>
+                <tr>
+                    <td>#273</td>
+                    <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/seedot.png" alt="Seedot"></td>
+                    <td>Seedot</td>
+                    <td colspan="2" class="grass">Grass</td>
+                </tr>
+                <tr>
+                    <td>#274</td>
+                    <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/nuzleaf.png" alt="Nuzleaf"></td>
+                    <td>Nuzleaf</td>
+                    <td class="grass">Grass</td>
+                    <td class="dark">Dark</td>
+                </tr>
+                <tr>
+                    <td>#275</td>
+                    <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/shiftry.png" alt="Shiftry"></td>
+                    <td>Shiftry</td>
+                    <td class="grass">Grass</td>
+                    <td class="dark">Dark</td>
+                </tr>
+                <tr>
+                    <td>#276</td>
+                    <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/taillow.png" alt="Taillow"></td>
+                    <td>Taillow</td>
+                    <td class="normal">Normal</td>
+                    <td class="flying">Flying</td>
+                </tr>
+                <tr>
+                    <td>#277</td>
+                    <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/swellow.png" alt="Swellow"></td>
+                    <td>Swellow</td>
+                    <td class="normal">Normal</td>
+                    <td class="flying">Flying</td>
+                </tr>
+                <tr>
+                    <td>#278</td>
+                    <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/wingull.png" alt="Wingull"></td>
+                    <td>Wingull</td>
+                    <td class="water">Water</td>
+                    <td class="flying">Flying</td>
+                </tr>
+                <tr>
+                    <td>#279</td>
+                    <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/pelipper.png" alt="Pelipper"></td>
+                    <td>Pelipper</td>
+                    <td class="water">Water</td>
+                    <td class="flying">Flying</td>
+                </tr>
+                <tr>
+                    <td>#280</td>
+                    <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/ralts.png" alt="Ralts"></td>
+                    <td>Ralts</td>
+                    <td class="psychic">Psychic</td>
+                    <td class="fairy">Fairy</td>
+                </tr>
+                <tr>
+                    <td>#281</td>
+                    <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/kirlia.png" alt="Kirlia"></td>
+                    <td>Kirlia</td>
+                    <td class="psychic">Psychic</td>
+                    <td class="fairy">Fairy</td>
+                </tr>
+                <tr>
+                    <td>#282</td>
+                    <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/gardevoir.png" alt="Gardevoir"></td>
+                    <td>Gardevoir</td>
+                    <td class="psychic">Psychic</td>
+                    <td class="fairy">Fairy</td>
+                </tr>
+                <tr>
+                    <td>#283</td>
+                    <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/surskit.png" alt="Surskit"></td>
+                    <td>Surskit</td>
+                    <td class="bug">Bug</td>
+                    <td class="water">Water</td>
+                </tr>
+                <tr>
+                    <td>#284</td>
+                    <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/masquerain.png" alt="Masquerain"></td>
+                    <td>Masquerain</td>
+                    <td class="bug">Bug</td>
+                    <td class="flying">Flying</td>
+                </tr>
+                <tr>
+                    <td>#285</td>
+                    <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/shroomish.png" alt="Shroomish"></td>
+                    <td>Shroomish</td>
+                    <td colspan="2" class="grass">Grass</td>
+                </tr>
+                <tr>
+                    <td>#286</td>
+                    <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/breloom.png" alt="Breloom"></td>
+                    <td>Breloom</td>
+                    <td class="grass">Grass</td>
+                    <td class="fighting">Fighting</td>
+                </tr>
+                <tr>
+                    <td>#287</td>
+                    <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/slakoth.png" alt="Slakoth"></td>
+                    <td>Slakoth</td>
+                    <td colspan="2" class="normal">Normal</td>
+                </tr>
+                <tr>
+                    <td>#288</td>
+                    <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/vigoroth.png" alt="Vigoroth"></td>
+                    <td>Vigoroth</td>
+                    <td colspan="2" class="normal">Normal</td>
+                </tr>
+                <tr>
+                    <td>#289</td>
+                    <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/slaking.png" alt="Slaking"></td>
+                    <td>Slaking</td>
+                    <td colspan="2" class="normal">Normal</td>
+                </tr>
+                <tr>
+                    <td>#290</td>
+                    <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/nincada.png" alt="Nincada"></td>
+                    <td>Nincada</td>
+                    <td class="bug">Bug</td>
+                    <td class="ground">Ground</td>
+                </tr>
+                <tr>
+                    <td>#291</td>
+                    <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/ninjask.png" alt="Ninjask"></td>
+                    <td>Ninjask</td>
+                    <td class="bug">Bug</td>
+                    <td class="flying">Flying</td>
+                </tr>
+                <tr>
+                    <td>#292</td>
+                    <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/shedinja.png" alt="Shedinja"></td>
+                    <td>Shedinja</td>
+                    <td class="bug">Bug</td>
+                    <td class="ghost">Ghost</td>
+                </tr>
+                <tr>
+                    <td>#293</td>
+                    <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/whismur.png" alt="Whismur"></td>
+                    <td>Whismur</td>
+                    <td colspan="2" class="normal">Normal</td>
+                </tr>
+                <tr>
+                    <td>#294</td>
+                    <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/loudred.png" alt="Loudred"></td>
+                    <td>Loudred</td>
+                    <td colspan="2" class="normal">Normal</td>
+                </tr>
+                <tr>
+                    <td>#295</td>
+                    <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/exploud.png" alt="Exploud"></td>
+                    <td>Exploud</td>
+                    <td colspan="2" class="normal">Normal</td>
+                </tr>
+                <tr>
+                    <td>#296</td>
+                    <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/makuhita.png" alt="Makuhita"></td>
+                    <td>Makuhita</td>
+                    <td colspan="2" class="fighting">Fighting</td>
+                </tr>
+                <tr>
+                    <td>#297</td>
+                    <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/hariyama.png" alt="Hariyama"></td>
+                    <td>Hariyama</td>
+                    <td colspan="2" class="fighting">Fighting</td>
+                </tr>
+                <tr>
+                    <td>#298</td>
+                    <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/azurill.png" alt="Azurill"></td>
+                    <td>Azurill</td>
+                    <td class="normal">Normal</td>
+                    <td class="fairy">Fairy</td>
+                </tr>
+                <tr>
+                    <td>#299</td>
+                    <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/nosepass.png" alt="Nosepass"></td>
+                    <td>Nosepass</td>
+                    <td colspan="2" class="rock">Rock</td>
+                </tr>
+                <tr>
+                    <td>#300</td>
+                    <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/skitty.png" alt="Skitty"></td>
+                    <td>Skitty</td>
+                    <td colspan="2" class="normal">Normal</td>
+                </tr>
+                <tr>
+                    <td>#301</td>
+                    <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/delcatty.png" alt="Delcatty"></td>
+                    <td>Delcatty</td>
+                    <td colspan="2" class="normal">Normal</td>
+                </tr>
+                <tr>
+                    <td>#302</td>
+                    <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/sableye.png" alt="Sableye"></td>
+                    <td>Sableye</td>
+                    <td class="dark">Dark</td>
+                    <td class="ghost">Ghost</td>
+                </tr>
+                <tr>
+                    <td>#303</td>
+                    <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/mawile.png" alt="Mawile"></td>
+                    <td>Mawile</td>
+                    <td class="steel">Steel</td>
+                    <td class="fairy">Fairy</td>
+                </tr>
+                <tr>
+                    <td>#304</td>
+                    <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/aron.png" alt="Aron"></td>
+                    <td>Aron</td>
+                    <td class="steel">Steel</td>
+                    <td class="rock">Rock</td>
+                </tr>
+                <tr>
+                    <td>#305</td>
+                    <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/lairon.png" alt="Lairon"></td>
+                    <td>Lairon</td>
+                    <td class="steel">Steel</td>
+                    <td class="rock">Rock</td>
+                </tr>
+                <tr>
+                    <td>#306</td>
+                    <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/aggron.png" alt="Aggron"></td>
+                    <td>Aggron</td>
+                    <td class="steel">Steel</td>
+                    <td class="rock">Rock</td>
+                </tr>
+                <tr>
+                    <td>#307</td>
+                    <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/meditite.png" alt="Meditite"></td>
+                    <td>Meditite</td>
+                    <td class="fighting">Fighting</td>
+                    <td class="psychic">Psychic</td>
+                </tr>
+                <tr>
+                    <td>#308</td>
+                    <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/medicham.png" alt="Medicham"></td>
+                    <td>Medicham</td>
+                    <td class="fighting">Fighting</td>
+                    <td class="psychic">Psychic</td>
+                </tr>
+                <tr>
+                    <td>#309</td>
+                    <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/electrike.png" alt="Electrike"></td>
+                    <td>Electrike</td>
+                    <td colspan="2" class="electric">Electric</td>
+                </tr>
+                <tr>
+                    <td>#310</td>
+                    <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/manectric.png" alt="Manectric"></td>
+                    <td>Manectric</td>
+                    <td colspan="2" class="electric">Electric</td>
+                </tr>
+                <tr>
+                    <td>#311</td>
+                    <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/plusle.png" alt="Plusle"></td>
+                    <td>Plusle</td>
+                    <td colspan="2" class="electric">Electric</td>
+                </tr>
+                <tr>
+                    <td>#312</td>
+                    <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/minun.png" alt="Minun"></td>
+                    <td>Minun</td>
+                    <td colspan="2" class="electric">Electric</td>
+                </tr>
+                <tr>
+                    <td>#313</td>
+                    <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/volbeat.png" alt="Volbeat"></td>
+                    <td>Volbeat</td>
+                    <td colspan="2" class="bug">Bug</td>
+                </tr>
+                <tr>
+                    <td>#314</td>
+                    <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/illumise.png" alt="Illumise"></td>
+                    <td>Illumise</td>
+                    <td colspan="2" class="bug">Bug</td>
+                </tr>
+                <tr>
+                    <td>#315</td>
+                    <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/roselia.png" alt="Roselia"></td>
+                    <td>Roselia</td>
+                    <td class="grass">Grass</td>
+                    <td class="poison">Poison</td>
+                </tr>
+                <tr>
+                    <td>#316</td>
+                    <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/gulpin.png" alt="Gulpin"></td>
+                    <td>Gulpin</td>
+                    <td colspan="2" class="poison">Poison</td>
+                </tr>
+                <tr>
+                    <td>#317</td>
+                    <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/swalot.png" alt="Swalot"></td>
+                    <td>Swalot</td>
+                    <td colspan="2" class="poison">Poison</td>
+                </tr>
+                <tr>
+                    <td>#318</td>
+                    <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/carvanha.png" alt="Carvanha"></td>
+                    <td>Carvanha</td>
+                    <td class="water">Water</td>
+                    <td class="dark">Dark</td>
+                </tr>
+                <tr>
+                    <td>#319</td>
+                    <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/sharpedo.png" alt="Sharpedo"></td>
+                    <td>Sharpedo</td>
+                    <td class="water">Water</td>
+                    <td class="dark">Dark</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Tabulka pokémonů #320 - #386 -->
+    <div class="col-md-12 col-lg-6 col-xs-12">
+        <h3 class="mt-5 text-center">Tabulka pokémonů #320 - #386</h3>
+      <table class="table table-bordered text-center johto">
+        <thead>
+          <tr>
+            <th>Pořadí</th>
+            <th>Obrázek</th>
+            <th>Pokémon</th>
+            <th colspan="2">Typ</th>
+          </tr>
+        </thead>
+        <tbody class="pokemoni-tabulka">
+            <tr>
+                <td>#320</td>
+                <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/wailmer.png" alt="Wailmer"></td>
+                <td>Wailmer</td>
+                <td colspan="2" class="water">Water</td>
+            </tr>
+            <tr>
+                <td>#321</td>
+                <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/wailord.png" alt="Wailord"></td>
+                <td>Wailord</td>
+                <td colspan="2" class="water">Water</td>
+            </tr>
+            <tr>
+                <td>#322</td>
+                <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/numel.png" alt="Numel"></td>
+                <td>Numel</td>
+                <td class="fire">Fire</td>
+                <td class="ground">Ground</td>
+            </tr>
+            <tr>
+                <td>#323</td>
+                <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/camerupt.png" alt="Camerupt"></td>
+                <td>Camerupt</td>
+                <td class="fire">Fire</td>
+                <td class="ground">Ground</td>
+            </tr>
+            <tr>
+                <td>#324</td>
+                <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/torkoal.png" alt="Torkoal"></td>
+                <td>Torkoal</td>
+                <td colspan="2" class="fire">Fire</td>
+            </tr>
+            <tr>
+                <td>#325</td>
+                <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/spoink.png" alt="Spoink"></td>
+                <td>Spoink</td>
+                <td colspan="2" class="psychic">Psychic</td>
+            </tr>
+            <tr>
+                <td>#326</td>
+                <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/grumpig.png" alt="Grumpig"></td>
+                <td>Grumpig</td>
+                <td colspan="2" class="psychic">Psychic</td>
+            </tr>
+            <tr>
+                <td>#327</td>
+                <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/spinda.png" alt="Spinda"></td>
+                <td>Spinda</td>
+                <td colspan="2" class="normal">Normal</td>
+            </tr>
+            <tr>
+                <td>#328</td>
+                <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/trapinch.png" alt="Trapinch"></td>
+                <td>Trapinch</td>
+                <td colspan="2" class="ground">Ground</td>
+            </tr>
+            <tr>
+                <td>#329</td>
+                <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/vibrava.png" alt="Vibrava"></td>
+                <td>Vibrava</td>
+                <td class="ground">Ground</td>
+                <td class="dragon">Dragon</td>
+            </tr>
+            <tr>
+                <td>#330</td>
+                <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/flygon.png" alt="Flygon"></td>
+                <td>Flygon</td>
+                <td class="ground">Ground</td>
+                <td class="dragon">Dragon</td>
+            </tr>
+            <tr>
+                <td>#331</td>
+                <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/cacnea.png" alt="Cacnea"></td>
+                <td>Cacnea</td>
+                <td colspan="2" class="grass">Grass</td>
+            </tr>
+            <tr>
+                <td>#332</td>
+                <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/cacturne.png" alt="Cacturne"></td>
+                <td>Cacturne</td>
+                <td class="grass">Grass</td>
+                <td class="dark">Dark</td>
+            </tr>
+            <tr>
+                <td>#333</td>
+                <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/swablu.png" alt="Swablu"></td>
+                <td>Swablu</td>
+                <td class="normal">Normal</td>
+                <td class="flying">Flying</td>
+            </tr>
+            <tr>
+                <td>#334</td>
+                <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/altaria.png" alt="Altaria"></td>
+                <td>Altaria</td>
+                <td class="dragon">Dragon</td>
+                <td class="flying">Flying</td>
+            </tr>
+            <tr>
+                <td>#335</td>
+                <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/zangoose.png" alt="Zangoose"></td>
+                <td>Zangoose</td>
+                <td colspan="2" class="normal">Normal</td>
+            </tr>
+            <tr>
+                <td>#336</td>
+                <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/seviper.png" alt="Seviper"></td>
+                <td>Seviper</td>
+                <td colspan="2" class="poison">Poison</td>
+            </tr>
+            <tr>
+                <td>#337</td>
+                <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/lunatone.png" alt="Lunatone"></td>
+                <td>Lunatone</td>
+                <td class="rock">Rock</td>
+                <td class="psychic">Psychic</td>
+            </tr>
+            <tr>
+                <td>#338</td>
+                <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/solrock.png" alt="Solrock"></td>
+                <td>Solrock</td>
+                <td class="rock">Rock</td>
+                <td class="psychic">Psychic</td>
+            </tr>
+            <tr>
+                <td>#339</td>
+                <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/barboach.png" alt="Barboach"></td>
+                <td>Barboach</td>
+                <td class="water">Water</td>
+                <td class="ground">Ground</td>
+            </tr>
+            <tr>
+                <td>#340</td>
+                <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/whiscash.png" alt="Whiscash"></td>
+                <td>Whiscash</td>
+                <td class="water">Water</td>
+                <td class="ground">Ground</td>
+            </tr>
+            <tr>
+                <td>#341</td>
+                <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/corphish.png" alt="Corphish"></td>
+                <td>Corphish</td>
+                <td colspan="2" class="water">Water</td>
+            </tr>
+            <tr>
+                <td>#342</td>
+                <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/crawdaunt.png" alt="Crawdaunt"></td>
+                <td>Crawdaunt</td>
+                <td class="water">Water</td>
+                <td class="dark">Dark</td>
+            </tr>
+            <tr>
+                <td>#343</td>
+                <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/baltoy.png" alt="Baltoy"></td>
+                <td>Baltoy</td>
+                <td class="ground">Ground</td>
+                <td class="psychic">Psychic</td>
+            </tr>
+            <tr>
+                <td>#344</td>
+                <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/claydol.png" alt="Claydol"></td>
+                <td>Claydol</td>
+                <td class="ground">Ground</td>
+                <td class="psychic">Psychic</td>
+            </tr>
+            <tr>
+                <td>#345</td>
+                <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/lileep.png" alt="Lileep"></td>
+                <td>Lileep</td>
+                <td class="rock">Rock</td>
+                <td class="grass">Grass</td>
+            </tr>
+            <tr>
+                <td>#346</td>
+                <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/cradily.png" alt="Cradily"></td>
+                <td>Cradily</td>
+                <td class="rock">Rock</td>
+                <td class="grass">Grass</td>
+            </tr>
+            <tr>
+                <td>#347</td>
+                <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/anorith.png" alt="Anorith"></td>
+                <td>Anorith</td>
+                <td class="rock">Rock</td>
+                <td class="bug">Bug</td>
+            </tr>
+            <tr>
+                <td>#348</td>
+                <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/armaldo.png" alt="Armaldo"></td>
+                <td>Armaldo</td>
+                <td class="rock">Rock</td>
+                <td class="bug">Bug</td>
+            </tr>
+            <tr>
+                <td>#349</td>
+                <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/feebas.png" alt="Feebas"></td>
+                <td>Feebas</td>
+                <td colspan="2" class="water">Water</td>
+            </tr>
+            <tr>
+                <td>#350</td>
+                <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/milotic.png" alt="Milotic"></td>
+                <td>Milotic</td>
+                <td colspan="2" class="water">Water</td>
+            </tr>
+            <tr>
+                <td>#351</td>
+                <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/castform.png" alt="Castform"></td>
+                <td>Castform</td>
+                <td colspan="2" class="normal">Normal</td>
+            </tr>
+            <tr>
+                <td>#352</td>
+                <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/kecleon.png" alt="Kecleon"></td>
+                <td>Kecleon</td>
+                <td colspan="2" class="normal">Normal</td>
+            </tr>
+            <tr>
+                <td>#353</td>
+                <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/shuppet.png" alt="Shuppet"></td>
+                <td>Shuppet</td>
+                <td colspan="2" class="ghost">Ghost</td>
+            </tr>
+            <tr>
+                <td>#354</td>
+                <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/banette.png" alt="Banette"></td>
+                <td>Banette</td>
+                <td colspan="2" class="ghost">Ghost</td>
+            </tr>
+            <tr>
+                <td>#355</td>
+                <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/duskull.png" alt="Duskull"></td>
+                <td>Duskull</td>
+                <td colspan="2" class="ghost">Ghost</td>
+            </tr>
+            <tr>
+                <td>#356</td>
+                <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/dusclops.png" alt="Dusclops"></td>
+                <td>Dusclops</td>
+                <td colspan="2" class="ghost">Ghost</td>
+            </tr>
+            <tr>
+                <td>#357</td>
+                <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/tropius.png" alt="Tropius"></td>
+                <td>Tropius</td>
+                <td class="grass">Grass</td>
+                <td class="flying">Flying</td>
+            </tr>
+            <tr>
+                <td>#358</td>
+                <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/chimecho.png" alt="Chimecho"></td>
+                <td>Chimecho</td>
+                <td colspan="2" class="psychic">Psychic</td>
+            </tr>
+            <tr>
+                <td>#359</td>
+                <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/absol.png" alt="Absol"></td>
+                <td>Absol</td>
+                <td colspan="2" class="dark">Dark</td>
+            </tr>
+            <tr>
+                <td>#360</td>
+                <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/wynaut.png" alt="Wynaut"></td>
+                <td>Wynaut</td>
+                <td colspan="2" class="psychic">Psychic</td>
+            </tr>
+            <tr>
+                <td>#361</td>
+                <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/snorunt.png" alt="SNorunt"></td>
+                <td>Snorunt</td>
+                <td colspan="2" class="ice">Ice</td>
+            </tr>
+            <tr>
+                <td>#362</td>
+                <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/glalie.png" alt="Glalie"></td>
+                <td>Glalie</td>
+                <td colspan="2" class="ice">Ice</td>
+            </tr>
+            <tr>
+                <td>#363</td>
+                <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/spheal.png" alt="Spheal"></td>
+                <td>Spheal</td>
+                <td class="ice">Ice</td>
+                <td class="water">Water</td>
+            </tr>
+            <tr>
+                <td>#364</td>
+                <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/sealeo.png" alt="Sealeo"></td>
+                <td>Sealeo</td>
+                <td class="ice">Ice</td>
+                <td class="water">Water</td>
+            </tr>
+            <tr>
+                <td>#365</td>
+                <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/walrein.png" alt="Walrein"></td>
+                <td>Walrein</td>
+                <td class="ice">Ice</td>
+                <td class="water">Water</td>
+            </tr>
+            <tr>
+                <td>#366</td>
+                <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/clamperl.png" alt="Clamperl"></td>
+                <td>Clamperl</td>
+                <td colspan="2" class="water">Water</td>
+            </tr>
+            <tr>
+                <td>#367</td>
+                <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/huntail.png" alt="Huntail"></td>
+                <td>Huntial</td>
+                <td colspan="2" class="water">Water</td>
+            </tr>
+            <tr>
+                <td>#368</td>
+                <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/gorebyss.png" alt="Gorebyss"></td>
+                <td>Gorebyss</td>
+                <td colspan="2" class="water">Water</td>
+            </tr>
+            <tr>
+                <td>#369</td>
+                <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/relicanth.png" alt="Relicanth"></td>
+                <td>Relicanth</td>
+                <td class="water">Water</td>
+                <td class="rock">Rock</td>
+            </tr>
+            <tr>
+                <td>#370</td>
+                <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/luvdisc.png" alt="Luvdisc"></td>
+                <td>Luvdisc</td>
+                <td colspan="2" class="water">Water</td>
+            </tr>
+            <tr>
+                <td>#371</td>
+                <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/bagon.png" alt="Bagon"></td>
+                <td>Bagon</td>
+                <td colspan="2" class="dragon">Dragon</td>
+            </tr>
+            <tr>
+                <td>#372</td>
+                <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/shelgon.png" alt="Shelgon"></td>
+                <td>Shelgon</td>
+                <td colspan="2" class="dragon">Dragon</td>
+            </tr>
+            <tr>
+                <td>#373</td>
+                <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/salamence.png" alt="Salamence"></td>
+                <td>Salamence</td>
+                <td class="dragon">Dragon</td>
+                <td class="flying">Flying</td>
+            </tr>
+            <tr>
+                <td>#374</td>
+                <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/beldum.png" alt="Beldum"></td>
+                <td>Beldum</td>
+                <td class="steel">Steel</td>
+                <td class="psychic">Psychic</td>
+            </tr>
+            <tr>
+                <td>#375</td>
+                <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/metang.png" alt="Metang"></td>
+                <td>Metang</td>
+                <td class="steel">Steel</td>
+                <td class="psychic">Psychic</td>
+            </tr>
+            <tr>
+                <td>#376</td>
+                <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/metagross.png" alt="Metagross"></td>
+                <td>Metagross</td>
+                <td class="steel">Steel</td>
+                <td class="psychic">Psychic</td>
+            </tr>
+            <tr>
+                <td>#377</td>
+                <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/regirock.png" alt="Regirock"></td>
+                <td>Regirock</td>
+                <td colspan="2" class="rock">Rock</td>
+            </tr>
+            <tr>
+                <td>#378</td>
+                <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/regice.png" alt="Regice"></td>
+                <td>Regice</td>
+                <td colspan="2" class="ice">Ice</td>
+            </tr>
+            <tr>
+                <td>#379</td>
+                <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/registeel.png" alt="Registeel"></td>
+                <td>Registeel</td>
+                <td colspan="2" class="steel">Steel</td>
+            </tr>
+            <tr>
+                <td>#380</td>
+                <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/latias.png" alt="Latias"></td>
+                <td>Latias</td>
+                <td class="dragon">Dragon</td>
+                <td class="psychic">Psychic</td>
+            </tr>
+            <tr>
+                <td>#381</td>
+                <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/latios.png" alt="Latios"></td>
+                <td>Latios</td>
+                <td class="dragon">Dragon</td>
+                <td class="psychic">Psychic</td>
+            </tr>
+            <tr>
+                <td>#382</td>
+                <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/kyogre.png" alt="Kyogre"></td>
+                <td>Kyogre</td>
+                <td colspan="2" class="water">Water</td>
+            </tr>
+            <tr>
+                <td>#383</td>
+                <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/groudon.png" alt="Groudon"></td>
+                <td>Groudon</td>
+                <td colspan="2" class="ground">Ground</td>
+            </tr>
+            <tr>
+                <td>#384</td>
+                <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/rayquaza.png" alt="Rayquaza"></td>
+                <td>Rayquaza</td>
+                <td class="dragon">Dragon</td>
+                <td class="flying">Flying</td>
+            </tr>
+            <tr>
+                <td>#385</td>
+                <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/jirachi.png" alt="Jirachi"></td>
+                <td>Jirachi</td>
+                <td class="steel">Steel</td>
+                <td class="psychic">Psychic</td>
+            </tr>
+            <tr>
+                <td>#386</td>
+                <td><img src="https://img.pokemondb.net/sprites/omega-ruby-alpha-sapphire/dex/normal/deoxys.png" alt="Deoxys"></td>
+                <td>Deoxys</td>
+                <td colspan="2" class="psychic">Psychic</td>
+            </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Města a vesnice -->
+    <div class="col-md-12 col-lg-12 col-xs-12">
+        <h3 class="mt-5 text-center">Města a vesnice regionu</h3>
+        <table class="table table-bordered text-center">
+          <thead>
+            <tr>
+              <th>Obrázek</th>
+              <th>Název</th>
+              <th>Populace</th>
+              <th>Popis</th>
+            </tr>
+          </thead>
+          <tbody class="mestaavesnice pokemoni-tabulka">
+            <tr>
+              <td><img src="../../img/hoenn-littleroot_town.png" alt="Littleroot Town"></td>
+              <td>Littleroot Town</td>
+              <td>10</td>
+              <td>Toto jednoduché městečko, které je obklopeno pulzující přírodou, není zastíněno žádným barevným odstínem.</td>
+            </tr>
+            <tr>
+              <td><img src="../../img/hoenn-oldale_town.png" alt="Oldale Town"></td>
+              <td>Oldale Town</td>
+              <td>14</td>
+              <td>Město, kde je nejkrásnější kontrast mezi barevnými květy a hlubokými zelenými lesy.</td>
+            </tr>
+            <tr>
+              <td><img src="../../img/hoenn-petalburg_city.png" alt="Petalburg City"></td>
+              <td>Petalburg City</td>
+              <td>26</td>
+              <td>V tomto městě, které je lemováno oceánským břehem, je vždy ve vzduchu sůl.</td>
+            </tr>
+            <tr>
+              <td><img src="../../img/hoenn-rustboro_city.png" alt="Rustboro City"></td>
+              <td>Rustboro City</td>
+              <td>63</td>
+              <td>Toto město je hlavním centrem průmyslu v oblasti Hoenn, s Devon Corporation jako jeho bijící srdce.</td>
+            </tr>
+            <tr>
+              <td><img src="../../img/hoenn-dewford_town.png" alt="Dewford Town"></td>
+              <td>Dewford Town</td>
+              <td>26</td>
+              <td>Nové trendy jsou vždy příčinou vzteku mezi obyvateli tohoto malého ostrovního města.</td>
+            </tr>
+            <tr>
+              <td><img src="../../img/hoenn-slateport_city.png" alt="Slateport City"></td>
+              <td>Slateport City</td>
+              <td>79</td>
+              <td>Lidé z mnoha různých regionů se shromažďují a mísí v tomto rušném přístavním městě.</td>
+            </tr>
+            <tr>
+              <td><img src="../../img/hoenn-mauville_city.png" alt="Mauville City"></td>
+              <td>Mauville City</td>
+              <td>148</td>
+              <td>Toto velké město se nachází v srdci regionu Hoenn, na křižovatce své nostalgické minulosti a nové technologie.</td>
+            </tr>
+            <tr>
+              <td><img src="../../img/hoenn-verdanturf_town.png" alt="Verdanturf Town"></td>
+              <td>Verdanturf Town</td>
+              <td>27</td>
+              <td>Díky převládajícímu vzoru větru je toto město vždy chráněno před padajícím sopečným popelem.</td>
+            </tr>
+            <tr>
+              <td><img src="../../img/hoenn-fallarbor_town.png" alt="Fallarbor Town"></td>
+              <td>Fallarbor Town</td>
+              <td>26</td>
+              <td>Město tvořené učenci, kteří se shromažďují pro výzkum meteoritů.</td>
+            </tr>
+            <tr>
+              <td><img src="../../img/hoenn-lavaridge_town.png" alt="Lavaridge Town"></td>
+              <td>Lavaridge Town</td>
+              <td>27</td>
+              <td>Populární místo v oblasti Hoenn, díky svým horkým pramenům, prý vyléčí jakékoli onemocnění.</td>
+            </tr>
+            <tr>
+              <td><img src="../../img/hoenn-fortree_city.png" alt="Fortree City"></td>
+              <td>Fortree City</td>
+              <td>37</td>
+              <td>Lidé a Pokémoni tohoto města následují narážky na přírodu, aby každé ráno stoupali a končili každý den.</td>
+            </tr>
+            <tr>
+              <td><img src="../../img/hoenn-lilycove_city.png" alt="Lilycove City"></td>
+              <td>Lilycove City</td>
+              <td>106</td>
+              <td>Tato turistická destinace prochází oživením, díky popularitě svých velkolepých Pokémoních soutěží.</td>
+            </tr>
+            <tr>
+              <td><img src="../../img/hoenn-mossdeep_city.png" alt="Mossdeep City"></td>
+              <td>Mossdeep City</td>
+              <td>45</td>
+              <td>Výzkum probíhá v tomto městě ve dne i v noci, to vše v naději na pochopení vzdálených oblastí vesmíru.</td>
+            </tr>
+            <tr>
+              <td><img src="../../img/hoenn-sootopolis_city.png" alt="Sootopolis City"></td>
+              <td>Sootopolis City</td>
+              <td>42</td>
+              <td>Toto město, které se tyčí z kráteru velkého pádu meteoroidů, může být dosaženo pouze mořem nebo z nebe.</td>
+            </tr>
+            <tr>
+              <td><img src="../../img/hoenn-pacifidlog_town.png" alt="Pacifidlog Town"></td>
+              <td>Pacifidlog Town</td>
+              <td>18</td>
+              <td>Toto město nejprve vzniklo jako plovoucí sklad používaný lidmi žijícími na povrchu oceánu.</td>
+            </tr>
+            <tr>
+              <td><img src="../../img/hoenn-ever_grande_city.png" alt="Ever Grande City"></td>
+              <td>Ever Grande City</td>
+              <td>&nbsp;</td>
+              <td>Toto město je pokryto množstvím barevných květů. To hraje hostitele k velké Pokémon lize.
+                Úctyhodné místo, které můžou navštěvovat pouze trenéři, kteří ovládali každý poslední Pokémon Gym.</td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+
+<!-- Hoenn gym leadři -->
+<div class="col-md-12 col-lg-12 col-xs-12">
+    <h3 class="mt-5 text-center">Gym leadři</h3>
+    <table class="table table-bordered text-center">
+      <thead>
+        <tr>
+          <th>Jméno</th>
+          <th>Lokace</th>
+          <th>Typ</th>
+          <th>Badge</th>
+        </tr>
+      </thead>
+      <tbody class="pokemoni-tabulka">
+        <tr class="rock">
+          <td> <img src="../../img/hoenn-roxanne.png" alt="Roxanne"> Roxanne</td>
+          <td>Rustboro City</td>
+          <td>Rock</td>
+          <td><img src="../../img/hoenn-stone-badge.png" alt="Stone Badge"> Stone Badge</td>
+        </tr>
+        <tr class="fighting">
+          <td> <img src="../../img/hoenn-brawly.png" alt="Brawly"> Brawly</td>
+          <td>Dewford Town</td>
+          <td>Fighting</td>
+          <td><img src="../../img/hoenn-knuckle-badge.png" alt="Knuckle Badge"> Knuckle Badge</td>
+        </tr>
+        <tr class="electric">
+          <td> <img src="../../img/hoenn-wattson.png" alt="Wattson"> Wattson</td>
+          <td>Mauville City</td>
+          <td>Electric</td>
+          <td><img src="../../img/hoenn-dynamo-badge.png" alt="Dynamo Badge"> Dynamo Badge</td>
+        </tr>
+        <tr class="fire">
+          <td> <img src="../../img/hoenn-flannery.png" alt="Flannery"> Flannery</td>
+          <td>Lavaridge Town</td>
+          <td>Fire</td>
+          <td><img src="../../img/hoenn-heat-badge.png" alt="Heat Badge"> Heat Badge</td>
+        </tr>
+        <tr class="normal">
+          <td> <img src="../../img/hoenn-norman.png" alt="Norman"> Norman</td>
+          <td>Petalburg City</td>
+          <td>Normal</td>
+          <td><img src="../../img/hoenn-balance-badge.png" alt="Balance Badge"> Balance Badge</td>
+        </tr>
+        <tr class="flying">
+          <td> <img src="../../img/hoenn-winona.png" alt="Winona"> Winona</td>
+          <td>Fortree City</td>
+          <td>Flying</td>
+          <td><img src="../../img/hoenn-feather-badge.png" alt="Feather Badge"> Feather Badge</td>
+        </tr>
+        <tr class="psychic">
+          <td> <img src="../../img/hoenn-tate-and-liza.png" alt="Tate and Liza"> Tate and Liza</td>
+          <td>Mossdeep City</td>
+          <td>Psychic</td>
+          <td><img src="../../img/hoenn-mind-badge.png" alt="Mind Badge"> Mind Badge</td>
+        </tr>
+        <tr class="water">
+          <td> <img src="../../img/hoenn-juan.png" alt="Juan"> Juan</td>
+          <td>Sootopolis City</td>
+          <td>Water</td>
+          <td><img src="../../img/hoenn-rain-badge.png" alt="Rain Badge"> Rain Badge</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+  </div>
+    
+
+  </main>
+  <footer>
+    <hr>
+    <div class="footer-div1">Matěj Čech</div>
+    <div class="footer-div2">&nbsp;</div>
+  </footer>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+    <script>
+            $(document).ready(function(){
+              $(".input_box").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $(".pokemoni-tabulka tr").filter(function() {
+                  $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+              });
+            });
+        </script>
+</body>
+
+</html>

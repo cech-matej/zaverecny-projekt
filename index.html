@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="cs">
+
+<head>
+  <title>Pokédex</title>
+  <meta name="description" content="Pokédex Pokémonů od Generace 1 (Kanto) po Generaci 7 (Alola)">
+  <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <nav class="nav">
+    <h2 class="logo"><a href="index.html"><img src="img/logo.png" alt="pokedex" height="55" width="55"> Pokédex</a></h2>
+    <input type="checkbox" id="chk">
+    <label for="chk" class="show-menu-btn">
+      <i class="fas fa-bars"></i>
+    </label>
+    <ul class="menu">
+      <li><a href="stranky/kanto/index.html">Kanto</a></li>
+      <li><a href="stranky/johto/index.html">Johto</a></li>
+      <li><a href="stranky/hoenn/index.html">Hoenn</a></li>
+      <li><a href="stranky/sinnoh/index.html">Sinnoh</a></li>
+      <li><a href="stranky/unova/index.html">Unova</a></li>
+      <li><a href="stranky/alola/index.html">Kalos</a></li>
+      <li><a href="stranky/alola/index.html">Alola</a></li>
+      <li>
+        <div class="box">
+          <input class="input_box" type="text" placeholder="Hledej">
+          <a class="btn" href="#">
+            <i class="fas fa-search"></i>
+
+          </a>
+        </div>
+      </li>
+      <li><i class="fas fa-sign-in-alt" data-toggle="modal" data-target="#myModal"></i></li>
+      <li><label for="chk" class="hide-menu-btn">
+          <i class="fas fa-times"></i>
+        </label></li>
+    </ul>
+
+  </nav>
+
+  <!-- Modal pro registraci/přihlášení -->
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <div><h4 class="modal-title reg">Registrace/Přihlášení</h4></div>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        
+        <div class="modal-body">
+          <div class="container">
+              <input type="checkbox" id="chk2">
+              <label for="chk2" style="float: right;" class="registrace-prihlaseni">Registrace <i class="fas fa-arrows-alt-h"></i> Přihlášení</label>
+                  
+            <h4 class="reg mb-3">Registrace</h4>
+            <h4 class="log mb-3">Přihlášení</h4>
+            <form class="reg">
+              <label for="uname"><b>Uživatelské jméno <i class="povinne">*</i> </b></label>
+              <input type="text" placeholder="Uživatelské jméno" name="uname" id="uname" required>
+        
+              <label for="psw1"><b>Heslo <i class="povinne">*</i> </b></label>
+              <input type="password" placeholder="Heslo" name="psw1" id="psw1" required>
+              
+              <label for="psw2"><b>Heslo znovu <i class="povinne">*</i> </b></label>
+              <input type="password" placeholder="Heslo znovu" name="psw2" id="psw2" required>
+
+              <label for="email"><b>E-mail <i class="povinne">*</i> </b></label>
+              <input type="email" placeholder="E-mail" name="email" id="email" required>
+
+              <label for="narozeniny"><b>Datum narození</b></label>
+              <input type="date" name="narozeniny" id="narozeniny">
+
+              <label for="starter"><b>Starter Pokémon <i class="povinne">*</i> </b></label>
+              <select name="starter" id="starter" required>
+                <option value="" class="nic" disabled selected>Vyber starter Pokémona</option>
+                <option value="kanto" class="select-generace" disabled>kanto - generace I</option>
+                <option value="bulbasaur">Bulbasaur</option>
+                <option value="charmander">Charmander</option>
+                <option value="squirtle">Squirtle</option>
+
+                <option value="johto" class="select-generace" disabled>johto - generace II</option>
+                <option value="chikorita">Chikorita</option>
+                <option value="cyndaquil">Cyndaquil</option>
+                <option value="totodile">Totodile</option>
+
+                <option value="hoenn" class="select-generace" disabled>hoenn - generace III</option>
+                <option value="treecko">Treecko</option>
+                <option value="torchic">Torchic</option>
+                <option value="mudkip">Mudkip</option>
+
+                <option value="sinnoh" class="select-generace" disabled>sinnoh - generace IV</option>
+                <option value="turtwig">Turtwig</option>
+                <option value="chimchar">Chimchar</option>
+                <option value="piplup">Piplup</option>
+
+                <option value="unova" class="select-generace" disabled>unova - generace V</option>
+                <option value="snivy">Snivy</option>
+                <option value="tepig">Tepig</option>
+                <option value="oshawott">Oshawott</option>
+
+                <option value="kalos" class="select-generace" disabled>kalos - generace VI</option>
+                <option value="chespin">Chespin</option>
+                <option value="fennekin">Fennekin</option>
+                <option value="froakie">Froakie</option>
+
+                <option value="alola" class="select-generace" disabled>alola - generace VII</option>
+                <option value="rowlet">Rowlet</option>
+                <option value="litten">Litten</option>
+                <option value="Popplio">Popplio</option>
+              </select>
+              <p class="povinne-udaje"><b><i class="povinne">*</i></b> - povinné údaje</p>
+              <button type="submit">Registrovat</button>
+              <br>
+              <label>
+                <input type="checkbox" checked="checked" name="remember"> Pamatovat si
+              </label>
+            </form>
+
+            <form class="log">
+                <label for="uname-log"><b>Uživatelské jméno</b></label>
+                <input type="text" placeholder="Uživatelské jméno" name="uname-log" id="uname-log" required>
+          
+                <label for="psw1-log"><b>Heslo</b></label>
+                <input type="password" placeholder="Heslo" name="psw1-log" id="psw1-log" required>
+                <button type="submit">Přihlásit se</button>
+                <br>
+                <label>
+                  <input type="checkbox" checked="checked" name="remember"> Pamatovat si
+                </label>
+              </form>
+            
+          </div>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Zavřít</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+<!-- Header stránky -->
+  <div id="header-bg">
+    <div class="header-text">
+      <h1>Pokémon</h1>
+      <h2>Gotta Catch 'Em All</h2>
+    </div>
+  </div>
+
+  <main class="container">
+    <h3 class="mt-4">Co to je Pokémon</h3>
+    <div>
+      Pokémoni jsou smyšlené bytosti s vysokou inteligencí. Přestože rozumí lidské řeči, ji nedokáží použít. V seriálu
+      jsou však i vyjímky, které dokázali s lidskými protějšky komunikovat.
+      Pokémoni dle svého typu mají speciální schopnosti. Pokémoni žijí volně, dokud je pokémon trenér nechytí do
+      Pokéballu a tak se stávají krotkými.
+      Trenér dále rozvíjí jejich schopnosti, které postupem času sílí. Své přednosti následně uplatňují v soubojích,
+      zbytek času jsou uzavřeni v Pokéballu. Vývoj každého Pokémona je doprovázen nevratnou změnou vzhledu a
+      fyzické velikosti. V šesté generaci hry přidali vývojáři takzvanou mega evoluci, která schopnosti Pokémonů vystřelí
+      do nesmyslných rozměrů. Mega evoluci lze použít pouze jednou za zápas. Po skončení boje se opět vrací na nejvyšší
+      dosaženou úroveň.
+    </div>
+
+    <h3 class="mt-4">Koncept</h3>
+    <div>
+      Koncept Pokémonů vznikl z Satoshio Tajiriho koníčku sbírání hmyzu. <br>
+      Původní hru vytvořil Satoshi Tajiri a byla publikovaná společností <a href="https://www.nintendo.com/">Nintendo <i class="fas fa-external-link-alt"></i></a> pro Game Boy. <br>
+      <div class="mt-1">Hráči představují takzvané Pokémon trenéry, kteří mají tři základní úkoly:
+      <ul>
+        <li>Zaplnit regionální Pokédex chytáním Pokémonů.</li>
+        <li>Zaplnit národní Pokédex.</li>
+        <li>Vytrénovat tým silných Pokémonů z těch, které chytli a utkat se dalším týmům jiných trenérů.</li>
+      </ul>
+      Tyto témata chytání, trénování a boje jsou zobrazeny v každé verzi Pokémonů zahrnující video hry, anime a Pokémon Trading Card Game (popř. <a href="https://www.pokemon.com/us/pokemon-tcg/play-online/">Pokémon Trading Card Game Online <i class="fas fa-external-link-alt"></i></a>) <br>
+      </div>
+      <div class="mt-1">
+        Trenér, který se střetne s Pokémonem je schopen Pokémona chytit tak, že na něj hodí speciální zakulacený nástroj nazývaný Pokéball. <br>
+        Pokud Pokémon není schopen útéci z Pokéballu, je následně považován za "vlastnictví" tohoto trenéra.
+        Poté bude Pokémon poslouchat příkazy, které obdrží od svého nového trenéra, pokud tedy trenér neprokáže dostatek zkušeností, že by raději Pokémon jednal sám. <br>
+        Trenéři mohou vyslat kteréhokoliv z jejich Pokémonů, aby vedli bitvy proti jiným Pokémonům.
+      </div>
+    </div>
+  </main>
+  <footer>
+    <hr>
+    <div class="footer-div1">Matěj Čech</div>
+    <a href="stranky/hra/index.html" class="default"><img src="img/caterpie.png" alt="caterpie"></a>
+    <div class="footer-div2">&nbsp;</div>
+  </footer>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
+</body>
+
+</html>

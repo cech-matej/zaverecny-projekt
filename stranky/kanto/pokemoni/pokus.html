@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="cs">
+
+<head>
+  <title>Pokédex</title>
+  <link rel="shortcut icon" href="../../../img/logo.png" type="image/x-icon">
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link rel="stylesheet" href="../../../css/style.css">
+  <style>
+      .switch input[type=checkbox]{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+.switch label {
+	cursor: pointer;
+	text-indent: -9999px;
+	width: 100px;
+	height: 50px;
+	background: grey;
+	display: block;
+	border-radius: 50px;
+  position: relative;
+  margin: auto;
+}
+
+.switch label:after {
+	content: '';
+	position: absolute;
+	top: 2.5px;
+	left: 2.5px;
+	width: 45px;
+	height: 45px;
+	background: #fff;
+	border-radius: 45px;
+	transition: 0.3s;
+}
+
+.switch input:checked + label {
+	background: #2c3e50;
+}
+
+.switch input:checked + label:after {
+	left: calc(100% - 5px);
+	transform: translateX(-100%);
+}
+
+.switch label:active:after {
+	width: 130px;
+}
+
+#p1 {
+  display: block !important;
+  text-align: center;
+}
+
+#p2 {
+  display: none !important;
+}
+
+.switch input:checked ~ #p1 {
+  display: none !important;
+}
+
+.switch input:checked ~ #p2 {
+  display: block !important;
+  text-align: center;
+}
+  </style>
+</head>
+
+<body>
+  <div class="nav">
+    <h2 class="logo"><a href="../../../index.html"><img src="../../../img/logo.png" alt="pokedex" height="55"
+          width="55"> Pokédex</a></h2>
+    <input type="checkbox" id="chk">
+    <label for="chk" class="show-menu-btn">
+      <i class="fas fa-bars"></i>
+    </label>
+    <ul class="menu">
+      <li><a href="../index.html">Kanto</a></li>
+      <li><a href="../../johto/index.html">Johto</a></li>
+      <li><a href="../../hoenn/index.html">Hoenn</a></li>
+      <li><a href="../../sinnoh/index.html">Sinnoh</a></li>
+      <li><a href="../../unova/index.html">Unova</a></li>
+      <li><a href="../../kalos/index.html">Kalos</a></li>
+      <li><a href="../../alola/index.html">Alola</a></li>
+      <li>
+        <div class="box">
+          <input class="input_box" type="text" placeholder="Hledej">
+          <a class="btn" href="#">
+            <i class="fas fa-search"></i>
+
+          </a>
+        </div>
+      </li>
+      <li><label for="chk" class="hide-menu-btn">
+          <i class="fas fa-times"></i>
+        </label></li>
+    </ul>
+
+  </div>
+
+  <div id="header-bg">
+    <div class="header-text">
+      <h1>Bulbasaur</h1>
+      <h2>Kanto</h2>
+    </div>
+  </div>
+
+  <main class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-7 pokemon-info-div text-center switch">
+        <br>
+          <input type="checkbox" id="switch" /><label for="switch">Toggle</label>
+        <p id="p1"><img src="../img/bulbasaur.png" class="pokemon" alt="Bulbasaur"></p> 
+        <p id="p2"><img src="../img/bulbasaur-s.png" class="pokemon" alt="Bulbasaur"></p> 
+      </div>
+      <div class="col-xs-12 col-md-5 col-xs-12">
+        <h3 class="mt-4">Základní informace</h3>
+        <table class="pokemon-info">
+          <tr>
+            <td>
+              <h4><b>Pokédex:</b></h4>
+            </td>
+            <td>
+              <h4>Kanto #001</h4>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <h4><b>Pokédex entry:</b></h4>
+            </td>
+            <td><i>Semínko na zádech Bulbasaura je naplněno živinami. Semínko roste s Bulbasaurovým tělem.</i></td>
+          </tr>
+          <tr>
+            <td>
+              <h4><b>Typ:</b></h4>
+            </td>
+            <td>
+              <h4><span class="badge grass">Grass</span> <span class="badge poison">Poison</span></h4>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <h4><b>Schopnost:</b></h4>
+            </td>
+            <td>
+              <h4>Overgrow</h4>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <h4><b>Slabý vůči:</b></h4>
+            </td>
+            <td><span class="badge flying">Flying</span> <span class="badge fire">Fire</span> <span class="badge psychic">Psychic</span> <span class="badge ice">Ice</span></td>
+          </tr>
+          <tr>
+            <td>
+              <h4><b>Imunní:</b></h4>
+            </td>
+            <td><span class="badge none">None</span></td>
+          </tr>
+          <tr>
+            <td>
+              <h4><b>Odolný vůči:</b></h4>
+            </td>
+            <td><span class="badge fighting">Fighting</span> <span class="badge water">Water</span> <span class="badge grass">Grass</span> <span class="badge electric">Electric</span> <span class="badge fairy">Fairy</span></td>
+          </tr>
+          <tr>
+            <td>
+              <h4><b>Výška:</b></h4>
+            </td>
+            <td>
+              <h4>0.7m</h4>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <h4><b>Váha:</b></h4>
+            </td>
+            <td>
+              <h4>6.9kg</h4>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <h4><b>Stopa:</b></h4>
+            </td>
+            <td><img src="https://cdn.bulbagarden.net/upload/4/47/F001.png" alt="bulbasaurova stopa"></td>
+          </tr>
+        </table>
+      </div>
+      <div class="text-center col-12">
+        <h3 class="mt-3">Vývoje</h3>
+        <div>
+          <table class="pokemon-tabulka">
+            <tbody>
+              <tr>
+                <td class="pokemoni-karta">
+                  <span class="pokemoni-span">
+                    <img src="https://img.rankedboost.com/wp-content/plugins/pokemon-lets-go/assets/pixel-images/Pokemon-Lets-Go-Bulbasaur.png">
+                      <span class="pokemoni-jmeno">Bulbasaur
+                        <div class="mt-3">
+                          <span>
+                            <img src="https://img.rankedboost.com/wp-content/plugins/pokemon-lets-go/assets/tier-images/Grass-Type.png">
+                          <span> 
+                            <img src="https://img.rankedboost.com/wp-content/plugins/pokemon-lets-go/assets/tier-images/Poison-Type.png">
+                          </span>
+                          </span>
+                        </div>
+                      </span>
+                  </span>
+                </td>
+                <td><i class="fas fa-long-arrow-alt-right fa-3x"></i><br>(Level 16)</td>
+                <td class="pokemoni-karta">
+                  <span class="pokemoni-span">
+                    <img src="https://img.rankedboost.com/wp-content/plugins/pokemon-lets-go/assets/pixel-images/Pokemon-Lets-Go-Ivysaur.png">
+                      <span class="pokemoni-jmeno">Ivysaur
+                        <div class="mt-3">
+                          <span>
+                            <img src="https://img.rankedboost.com/wp-content/plugins/pokemon-lets-go/assets/tier-images/Grass-Type.png">
+                          <span> 
+                            <img src="https://img.rankedboost.com/wp-content/plugins/pokemon-lets-go/assets/tier-images/Poison-Type.png">
+                          </span>
+                          </span>
+                        </div>
+                      </span>
+                  </span>
+                </td>
+                <td><i class="fas fa-long-arrow-alt-right fa-3x"></i><br>(Level 32)</td>
+                <td class="pokemoni-karta">
+                  <span class="pokemoni-span">
+                    <img src="https://img.rankedboost.com/wp-content/plugins/pokemon-lets-go/assets/pixel-images/Pokemon-Lets-Go-Venusaur.png">
+                      <span class="pokemoni-jmeno">Venusaur
+                        <div class="mt-3">
+                          <span>
+                            <img src="https://img.rankedboost.com/wp-content/plugins/pokemon-lets-go/assets/tier-images/Grass-Type.png">
+                          <span> 
+                            <img src="https://img.rankedboost.com/wp-content/plugins/pokemon-lets-go/assets/tier-images/Poison-Type.png">
+                          </span>
+                          </span>
+                        </div>
+                      </span>
+                  </span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <hr>
+    <div class="footer-div1">Matěj Čech</div>
+    <div class="footer-div2">&nbsp;</div>
+  </footer>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
+</body>
+
+</html>

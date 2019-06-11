@@ -1,0 +1,673 @@
+/* Zákaz označování textu */
+body {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #5c80a3;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #1c2c3b;
+  box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #5c80a3;
+  box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+}
+
+/* Navigace */
+.nav {
+  margin: 0;
+  padding: 0 20px;
+  height: 100px;
+  background: #34495e;
+  color: #fff;
+  position: sticky !important;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 3;
+  position: relative;
+}
+
+.logo {
+  line-height: 100px;
+  float: left;
+  text-transform: uppercase;
+}
+
+.nav h2 a {
+  color: #fff;
+}
+
+.logo a:hover {
+  text-decoration: none;
+}
+
+/* Menu */
+.menu {
+  float: right;
+  line-height: 100px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0px;
+  right: 40px;
+}
+
+.menu a {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0 10px;
+  transition: 0.4s;
+}
+
+.show-menu-btn, .hide-menu-btn {
+  transition: 0.4s;
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+}
+
+.show-menu-btn {
+  float: right;
+  position: absolute;
+  top: 10px;
+  right: 36px;
+}
+
+.show-menu-btn i {
+  line-height: 100px;
+}
+
+.menu a:hover, .show-menu-btn:hover, .hide-menu-btn:hover {
+  color: #3498db;
+}
+
+#chk{
+  position: absolute;
+  visibility: hidden;
+  z-index: -1111;
+}
+
+@media screen and (max-width:850px) {
+  .show-menu-btn, .hide-menu-btn {
+    display: block;
+  }
+
+  .menu {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #333;
+    right: -100%;
+    top: 0;
+    text-align: center;
+    padding: 80px 0;
+    line-height: normal;
+    transition: 0.7s;
+  }
+
+  .menu a {
+    display: block;
+    padding: 20px;
+  }
+
+  .hide-menu-btn {
+    position: absolute;
+    top: 40px;
+    right: 43px;
+  }
+
+  #chk:checked ~ .menu{
+    right: 0;
+  }
+}
+
+
+ ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+ ul li {
+  float: left;
+}
+
+ ul li a {
+  display: block;
+}
+
+@media screen and (max-width: 850px) {
+  ul.menu, 
+  ul.menu li {float: none;}
+}
+
+/* Login/Register */
+.modal-body input[type=text], input[type=password], input[type=email], input[type=date], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin-bottom: 25px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.nic {
+  display: none;
+}
+
+.select-generace {
+  color: #3498db;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.modal-body button {
+  background-color: #1c2c3b;
+  color: white;
+  padding: 14px 20px;
+  margin: 5px auto;
+  border: none;
+  cursor: pointer;
+  width: 30%;
+}
+
+.modal-body button:hover {
+  opacity: 0.8;
+}
+
+.povinne {
+  color: red;
+}
+
+.fa-sign-in-alt {
+  margin-left: 10px;
+  transition: 1s;
+  -webkit-transition: width 1s, height 1s, -webkit-transform 1s;
+  transition: width 1s, height 1s, transform 1s;
+}
+
+.fa-sign-in-alt:hover {
+  color: #3498db;
+  transition: 0.5s;
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+
+#chk2 {
+  position: absolute;
+  visibility: hidden;
+  z-index: -1111;
+}
+
+.reg {
+  display: block;
+}
+
+.log {
+  display: none;
+}
+
+
+#chk2:checked ~ .reg {
+  display: none;
+}
+
+#chk2:checked ~ .log {
+  display: block;
+}
+
+.registrace-prihlaseni {
+  cursor: pointer;
+}
+
+.povinne-udaje {
+  font-size: 13px;
+  float: right;
+}
+
+.modal-footer .btn {
+  float: unset;
+  text-decoration: none;
+  width: unset;
+  height: unset;
+  line-height: unset;
+  text-align: unset;
+  border-radius: 5%;
+  margin-top: unset;
+}
+
+/* Search box */
+.box{
+  background-color: #2c3e50;
+  height: 40px;
+  border-radius: 40px;
+  padding: 10px;
+  margin-top: 29px;
+}
+
+ .input_box {
+  border: none;
+  outline: none;
+  background:none;
+  float: left;
+  padding: 0;
+  color: #ffff;
+  font-size: 16px;
+  transition: 0.4s all;
+  line-height: 40px;
+  width: 0px;
+  margin-top: -10px;
+}
+
+.box input[type=text]:focus {
+  width: 240px;
+}
+
+.btn {
+  float: right;
+  text-decoration: none;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  margin-top: -10px;
+}
+
+ .box:hover .input_box {
+  width: 240px;
+  padding: 0 6px; 
+}
+
+@media screen and (max-width:850px) {
+  .box {
+    width: 350px;
+    margin: 30px auto;
+  }
+  .btn {
+    margin-top: -30px;
+  }
+  .input_box {
+    width: 240px;
+  }
+}
+
+/* Header */
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+#header-bg {
+  background: url(../img/background.jpg) no-repeat 50% 50%;
+  display: table;
+  height: 90%;
+  width: 100%;
+  background-size: cover;
+}
+
+.header-text {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.7);
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 700%;
+  line-height: 1.2;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 350%;
+  }
+}
+
+/* Main */
+main h1, h2, h3, h4, h5, h6 {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+main h3 {
+  color: #34495e;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.zarovnany-nadpis {
+  text-align: center;
+  font-weight: bolder;
+}
+
+.zoom {
+  cursor: zoom-in;
+}
+
+.default {
+  cursor: default;
+}
+
+main div table {
+  margin-top: 25px;
+}
+
+.mestaavesnice td img{
+  width: 100px;
+}
+
+.mestaavesnice td {
+  vertical-align: middle;
+}
+
+.johto td{
+  vertical-align: middle !important;
+}
+
+.johto tbody tr td img {
+  width: 40px;
+}
+
+@media (max-width: 750px) {
+  table {
+    font-size: 0.7em;
+  }
+  .mapa {
+    width: 200px;
+    height: 138px;
+  }
+}
+
+.pokemoni-tabulka td{
+  vertical-align: middle !important;
+  text-align: center;
+}
+
+main ul {
+  list-style-type: unset;
+  overflow: unset;
+  margin-left: 35px;
+}
+
+main ul li {
+  float: unset;
+}
+
+main ul li a {
+  display: unset;
+}
+
+main a:hover {
+  text-decoration: none;
+}
+
+table {
+  background-color: rgb(248, 244, 244);
+}
+
+/* Pokémon type color */
+.grass {
+  background-color: #A7DB8D;
+}
+
+.fire {
+  background-color: #F5AC78;
+}
+
+.water {
+  background-color: #9DB7F5;
+}
+
+.poison {
+  background-color: #C183C1;
+}
+
+.flying {
+  background-color: #C6B7F5;
+}
+
+.bug  {
+  background-color: #C6D16E;
+}
+
+.normal {
+  background-color: #C6C6A7;
+}
+
+.electric {
+  background-color: #FAE078;
+}
+
+.ground {
+  background-color: #EBD69D;
+}
+
+.fairy {
+  background-color: #F4BDC9;
+}
+
+.fighting {
+  background-color: #D67873;
+}
+
+.psychic {
+  background-color: #FA92B2;
+}
+
+.rock {
+  background-color: #D1C17D;
+}
+
+.steel {
+  background-color: #D1D1E0;
+}
+
+.ice {
+  background-color: #BCE6E6;
+}
+
+.ghost {
+  background-color: #A292BC;
+}
+
+.dragon {
+  background-color: #A27DFA;
+}
+
+.dark {
+  background-color: #A29288;
+}
+
+.none {
+  background-color: black;
+  color: white;
+}
+
+/*  Stránky pokémonů  */
+.pokemon-info {
+  background-color: unset;
+}
+
+.pokemon-info td {
+  width: 180px;
+}
+
+.pokemon-info td img {
+  width: 30px;
+}
+
+.pokemon-info-div button {
+  background-color: unset;
+  border: 1px solid #2c3e50;
+  color: #2c3e50;
+  padding: 15px 32px;
+  margin: 0 8px;
+  text-align: center;
+  width: 150px;
+  transition-duration: 0.4s;
+  border-radius: 8%;
+  outline: none;
+}
+
+.pokemon-info-div button:hover {
+  background-color: #2c3e50;
+  color: white;
+}
+
+.pokemon-info-div button:focus {
+  background-color: #2c3e50;
+  color: white;
+}
+
+#pokemon {
+  width: 400px;
+}
+
+.pokemoni-karta {
+  background: #2c3e50;
+  border-radius: 3px;
+  width: auto;
+}
+
+.pokemoni-span {
+  background: #2c3e50;
+    border-radius: 3px;
+    border: 1px solid #2c3e50;
+}
+
+.pokemoni-jmeno {
+  font-weight: bold;
+  color: #f1e6d2;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  line-height: 10px;
+  margin-top: 8px;
+  display: block;
+  text-align: center;
+}
+
+.pokemon-tabulka {
+  width: 100%;
+  background-color: unset;
+}
+
+@media (max-width: 750px) {
+  #pokemon {
+    width: 300px;
+  }
+
+  .pokemoni-typy span{
+    font-size: 13px;
+  }
+}
+
+
+/* Footer */
+footer {
+  background: #34495e;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle !important;
+  text-align: center;
+}
+
+.footer-div1 {
+  padding: 2px;
+}
+
+.footer-div2 {
+  padding: 4px;
+  line-height: 12px;
+}
+
+footer hr {
+  height: 3px;
+  color: #1f2c3a;
+  background-color: #1f2c3a;
+  border: none;
+}
+
+footer img {
+  float: left;
+  width: 2px;
+  height: 2px;
+}
+
+@media (max-width: 750px) {
+  footer img {
+    display: none;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* Hra */
+.innerOverlay {
+  position: absolute;
+  width: 30%;
+  right: 40%;
+  bottom: 50%;
+  top: 30%;
+  left: 35%;
+}
+
+.mainDisplay {
+  background-color: gray;
+  max-width: 90%;
+}
+
+.activeWords {
+  font-size: 1.5em;
+  letter-spacing: 0.3em;
+  color: #777;
+}
+
+#revealedAnswerDisplay {
+  color: red;
+}
+
+#guessesMadeDisplay {
+  font-size: 0.8em;
+}
+
+.correct {
+  color: green;
+  font-weight: bold;
+}
