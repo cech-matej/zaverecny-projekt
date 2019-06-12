@@ -309,6 +309,19 @@ body {
   }
 }
 
+@media screen and (max-width:750px) {
+  .box {
+    width: 300px;
+    margin: 30px auto;
+  }
+  .btn {
+    margin-top: -30px;
+  }
+  .input_box {
+    width: 220px;
+  }
+}
+
 /* Header */
 html, body {
   height: 100%;
@@ -404,6 +417,9 @@ main div table {
   .mapa {
     width: 200px;
     height: 138px;
+  }
+  .mestaavesnice td img{
+    width: 70px;
   }
 }
 
@@ -588,6 +604,14 @@ table {
 
   .pokemoni-typy span{
     font-size: 13px;
+  }
+
+  .pokemoni-span img {
+    width: 50%;
+  }
+
+  .pokemoni-span span img {
+    width: 35px;
   }
 }
 
