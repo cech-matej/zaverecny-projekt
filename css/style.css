@@ -255,7 +255,11 @@ body {
 
 @media screen and (max-width: 700px){
   .modal-body {
-    font-size: 10px;
+    font-size: 12px;
+  }
+
+  .log button, .reg button {
+    width: 100%;
   }
 }
 
