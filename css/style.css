@@ -334,6 +334,7 @@ html, body {
   height: 90%;
   width: 100%;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .header-text {
@@ -448,6 +449,11 @@ main a:hover {
 
 table {
   background-color: rgb(248, 244, 244);
+}
+
+.no-style {
+  text-decoration: none;
+  color: unset;
 }
 
 /* Pokémon type color */
