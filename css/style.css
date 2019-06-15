@@ -116,7 +116,7 @@ body {
     top: 0;
     text-align: center;
     padding: 80px 0;
-    line-height: normal;
+    line-height: 70%;
     transition: 0.7s;
   }
 
@@ -251,6 +251,12 @@ body {
   text-align: unset;
   border-radius: 5%;
   margin-top: unset;
+}
+
+@media screen and (max-width: 700px){
+  .modal-body {
+    font-size: 10px;
+  }
 }
 
 /* Search box */
